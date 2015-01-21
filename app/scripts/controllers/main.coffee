@@ -8,9 +8,5 @@
  # Controller of the appApp
 ###
 angular.module('appApp')
-  .controller 'MainCtrl', ($scope) ->
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
+  .controller 'MainCtrl', ($scope, Shows) ->
+    $scope.shows = Shows.all()
