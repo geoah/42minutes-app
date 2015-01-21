@@ -1,0 +1,9 @@
+<h1>{{show.title}}</h1>
+
+<ul>
+  <li ng-repeat="season in seasons">
+    <a ng-click="gotoSeason(season.season)">Season {{season.season}}</a>
+  </li>
+</ul>
+
+<div ui-view></div>

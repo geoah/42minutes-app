@@ -8,5 +8,4 @@
  # Controller of the appApp
 ###
 angular.module('appApp')
-  .controller 'MainCtrl', ($scope, Shows) ->
-    $scope.shows = Shows.all()
+  .controller 'MainCtrl', ($scope, $state, Shows) ->

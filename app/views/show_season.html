@@ -1,0 +1,7 @@
+<ul>
+  <li ng-repeat="episode in episodes">
+    <a ng-click="gotoEpisode(episode.episode)">S{{episode.season}}E{{episode.episode}} - {{episode.title}}</a>
+  </li>
+</ul>
+
+<div ui-view></div>

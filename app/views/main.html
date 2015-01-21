@@ -1,15 +1,1 @@
-<ul>
-  <li ng-repeat="show in shows">
-    <h5><a ng-click="seasons = show.$seasons()">{{show.title}}</a></h5>
-    <ul>
-      <li ng-repeat="season in seasons">
-        <a ng-click="episodes = season.$episodes()">{{season.season}}</a>
-        <ul>
-          <li ng-repeat="episode in episodes">
-            S{{season.season}}E{{episode.episode}} - {{episode.title}}
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+-
