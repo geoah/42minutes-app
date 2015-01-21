@@ -1,7 +1,11 @@
-<ul>
-  <li ng-repeat="episode in episodes">
-    <a ng-click="gotoEpisode(episode.episode)">S{{episode.season}}E{{episode.episode}} - {{episode.title}}</a>
-  </li>
-</ul>
-
-<div ui-view></div>
+<div class="col-md-6">
+  <h5>Episodes</h5>
+  <ul>
+    <li ng-repeat="episode in episodes">
+      <a ng-click="gotoEpisode(episode.episode)">S{{episode.season}}E{{episode.episode}} - {{episode.title}}</a>
+    </li>
+  </ul>
+</div>
+<div class="col-md-6">
+  <div ui-view></div>
+</div>

@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/spinkit/css/spinkit.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -23,31 +24,17 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
+          <li><a ui-sref="shows">Shows</a></li>
         </ul>
-        <h3 class="text-muted">app</h3>
+        <h3 class="text-muted">42minutes</h3>
       </div>
 
       <div ui-view=""></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p>created with <span class="glyphicon glyphicon-heart"></span> by the 42minutes team</p>
       </div>
     </div>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -79,9 +66,7 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/shows.js"></script>
         <script src="scripts/controllers/show.js"></script>
-        <script src="scripts/controllers/showseasons.js"></script>
         <script src="scripts/controllers/showseason.js"></script>
-        <script src="scripts/controllers/showseasonepisodes.js"></script>
         <script src="scripts/controllers/showseasonepisode.js"></script>
         <script src="scripts/controllers/shows.js"></script>
         <script src="scripts/services/seasons.js"></script>

@@ -1,6 +1,15 @@
-<ul>
-  <li ng-repeat="show in shows">
-    <a ng-click="gotoShow(show.id)">{{show.title}}</a>
-  </li>
-</ul>
-<div ui-view></div>
+<div class="row">
+
+    <div class="show" ng-repeat="show in shows" ng-click="gotoShow(show.id)">
+      <div class="poster-placeholder">
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
+        <div class="poster" ng-style="{backgroundImage: 'url('+(show.image_poster_thumb?show.image_poster_thumb:'none')+')'}"></div>
+      </div>
+      <div class="title">{{show.title}}</div>
+      <div class="year">{{show.year}}</div>
+    </div>
+
+</div>
