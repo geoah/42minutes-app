@@ -9,4 +9,6 @@
 ###
 angular.module('appApp')
   .factory 'Shows', ($resource, Settings) ->
-    $resource "#{Settings.url}/shows/:id"
+    $resource "#{Settings.url}/shows/:id", {},
+      search: method: 'GET', isArray:true
+

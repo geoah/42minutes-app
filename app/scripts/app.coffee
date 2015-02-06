@@ -20,9 +20,9 @@ angular
     'ngTouch'
     'ui.router'
   ])
-  .run ($rootScope, $injector) ->
+  .run ($rootScope, $injector, Settings) ->
     $injector.get("$http").defaults.transformRequest = (data, headersGetter) ->
-      headersGetter()["x-api-token"] = "7de81a84-9f26-4c8a-ad46-9acd013c4929" #if $rootScope.oauth
+      headersGetter()["x-api-token"] = Settings.token #if $rootScope.oauth
       angular.toJson data if data
 
   .config ($routeProvider, $stateProvider, $urlRouterProvider) ->
