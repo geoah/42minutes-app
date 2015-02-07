@@ -17,7 +17,7 @@ angular.module('appApp')
     $scope.gotoShow = (id) => $state.go 'show', id: id
 
     $scope.clear = () =>
-      $scope.shows = Shows.query()
+      $scope.searchTerm = ""
 
     $scope.searchShow = () =>
       $scope.shows = Shows.search name: $scope.searchTerm
