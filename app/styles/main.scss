@@ -41,9 +41,15 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     display: inline;
   }
 
-  .seasons {
+  .library {
     font-size: 0.85em;
     display: inline;
     float: right;
+  }
+}
+
+.episode {
+  &.unaired a {
+    color: maroon;
   }
 }
