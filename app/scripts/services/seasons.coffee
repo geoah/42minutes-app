@@ -9,4 +9,4 @@
 ###
 angular.module('appApp')
   .factory 'Seasons', ($resource) ->
-    $resource '//localhost/shows/:id/seasons/:season'
+    $resource '//localhost:8000/shows/:id/seasons/:season'
