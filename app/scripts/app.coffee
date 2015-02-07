@@ -20,12 +20,7 @@ angular
     'ngTouch'
     'ui.router'
   ])
-  .run ($rootScope, $injector) ->
-    $injector.get("$http").defaults.transformRequest = (data, headersGetter) ->
-      headersGetter()["x-api-token"] = "7de81a84-9f26-4c8a-ad46-9acd013c4929" #if $rootScope.oauth
-      angular.toJson data if data
-
-  .config ($routeProvider, $stateProvider, $urlRouterProvider) ->
+  .config ($routeProvider, $stateProvider, $urlRouterProvider, $httpProvider) ->
     $urlRouterProvider.otherwise 'shows'
     $stateProvider
       .state 'shows',
@@ -44,3 +39,10 @@ angular
         url: '/episodes/:episode'
         templateUrl: 'views/show_season_episode.html'
         controller: 'ShowSeasonEpisodeCtrl'
+
+    $httpProvider.interceptors.push () ->
+      {
+        request: (config) ->
+          config.headers["x-api-token"] = "7de81a84-9f26-4c8a-ad46-9acd013c4929" #if $rootScope.oauth
+          return config
+      }
