@@ -8,8 +8,11 @@
  # Factory in the appApp.
 ###
 angular.module('appApp')
-  .factory 'Shows', ($resource, $http) ->
-    $resource '//localhost:8000/shows/:id', id: '@id',
+  .factory 'Shows', ($resource, Settings) ->
+    $resource "#{Settings.url}/shows/:id", {id: '@id'},
+      search:
+        method: 'GET'
+        isArray: true
       favorite:
         method: 'PUT'
         isArray: false

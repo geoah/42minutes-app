@@ -8,5 +8,5 @@
  # Factory in the appApp.
 ###
 angular.module('appApp')
-  .factory 'Seasons', ($resource) ->
-    $resource '//localhost:8000/shows/:id/seasons/:season'
+  .factory 'Seasons', ($resource, Settings) ->
+    $resource "#{Settings.url}/shows/:id/seasons/:season"
