@@ -1,8 +1,11 @@
 <div class="col-md-6">
   <h5>Episodes</h5>
   <ul>
-    <li ng-repeat="episode in episodes">
+    <li class="episode" ng-class="{'unaired': episode.status!='aired'}" ng-repeat="episode in episodes">
       <a ng-click="gotoEpisode(episode.episode)">S{{episode.season}}E{{episode.episode}} - {{episode.title}}</a>
+      <span class="glyphicon glyphicon-magnet" ng-show="episode.infohash_sd"><a href="{{episode.infohash_sd}}"></a></span>
+      <span class="glyphicon glyphicon-magnet" ng-show="episode.infohash_sd480p"><a href="{{episode.infohash_sd480p}}"></a></span>
+      <span class="glyphicon glyphicon-magnet" ng-show="episode.infohash_hd720p"><a href="{{episode.infohash_hd720p}}"></a></span>
     </li>
   </ul>
 </div>

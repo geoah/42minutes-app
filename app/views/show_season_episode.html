@@ -1,3 +1,9 @@
 <h5>{{episode.title}}</h5>
 
 <p>{{episode.overview}}</p>
+
+<ul>
+  <li ng-show="episode.infohash_sd"><a href="{{episode.infohash_sd}}">Sd Magnet</a></li>
+  <li ng-show="episode.infohash_sd480p"><a href="{{episode.infohash_sd480p}}">Sd480p Magnet</a></li>
+  <li ng-show="episode.infohash_hd720p"><a href="{{episode.infohash_hd720p}}">Hd720p Magnet</a></li>
+</ul>
