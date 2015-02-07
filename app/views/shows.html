@@ -14,8 +14,8 @@
         <div class="poster" ng-style="{backgroundImage: 'url('+(show.image_poster_thumb?show.image_poster_thumb:'none')+')'}"></div>
       </div>
       <div class="title">{{show.title}}</div>
+      <div class="status">{{show.library_episodes}} in library</div>
       <div class="year">{{show.year}}</div>
-      <div class="library">{{show.library_episodes}} in library</div>
       <div class="favorite">
         <span ng-hide="show.favorite" ng-click="show.$favorite()">Add to favorites</span>
         <span ng-show="show.favorite" ng-click="show.$unfavorite()">Remove from favorites</span>
