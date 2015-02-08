@@ -17,12 +17,12 @@
       <div class="status">{{show.library_episodes}} in library</div>
       <div class="year">{{show.year}}</div>
       <div class="favorite">
-        <span ng-hide="show.favorite" ng-click="show.$favorite()">Add to favorites</span>
-        <span ng-show="show.favorite" ng-click="show.$unfavorite()">Remove from favorites</span>
+        <span ng-hide="show.favorite" ng-click="show.$favorite()" class="clickable">Add to favorites</span>
+        <span ng-show="show.favorite" ng-click="show.$unfavorite()" class="clickable">Remove from favorites</span>
       </div>
       <div class="library">
-        <span ng-hide="show.library" ng-click="show.$library()">Add to library</span>
-        <span ng-show="show.library" ng-click="show.$unlibrary()">Remove from library</span>
+        <span ng-hide="show.library" ng-click="show.$library()" class="clickable">Add to library</span>
+        <span ng-show="show.library" ng-click="show.$unlibrary()" class="clickable">Remove from library</span>
       </div>
     </div>
 

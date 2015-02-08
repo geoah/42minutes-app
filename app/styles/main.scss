@@ -4,6 +4,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // endbower
 @import "../bower_components/spinkit/scss/spinners/2-double-bounce";
 
+.clickable {
+  cursor: pointer;
+}
+
 .show {
   display: inline-block;
   margin: 10px;
