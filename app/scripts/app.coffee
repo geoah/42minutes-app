@@ -20,9 +20,13 @@ angular
     'ngTouch'
     'ui.router'
   ])
-  .config ($routeProvider, $stateProvider, $urlRouterProvider, $httpProvider) ->
+  .config ($routeProvider, $stateProvider, $urlRouterProvider, $httpProvider ) ->
     $urlRouterProvider.otherwise 'shows'
     $stateProvider
+      .state 'login',
+        url: '/login'
+        templateUrl: 'views/login.html'
+        controller: 'LoginCtrl'
       .state 'shows',
         url: '/shows'
         templateUrl: 'views/shows.html'
@@ -40,9 +44,9 @@ angular
         templateUrl: 'views/show_season_episode.html'
         controller: 'ShowSeasonEpisodeCtrl'
 
-    $httpProvider.interceptors.push () ->
+    $httpProvider.interceptors.push (Settings) ->
       {
         request: (config) ->
-          config.headers["x-api-token"] = "7de81a84-9f26-4c8a-ad46-9acd013c4929" #if $rootScope.oauth
+          config.headers["x-api-token"] = Settings.token #if $rootScope.oauth
           return config
       }
